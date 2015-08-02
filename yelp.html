@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Student Name:   -->
+<html lang="en">
+  <head>
+    <title>Web Mashup: Display Best Restaurants on a Map</title>
+    <meta charset="utf-8"/>
+    <script type="text/javascript" src="yelp.js"></script>
+  </head>
+  <style>
+#output {
+    line-height:30px;
+    background-color:#5D7CFB;
+    height:10000px;
+    width:400px;
+    float:right;
+    padding:5px;	      
+}
+html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+#info {
+    line-height:30px;
+    background-color:#FFFFFF ;
+    height:500px;
+    width:600px;
+    float:left;
+    padding:5px;	 	 
+}
+</style>
+  <body onload="loadScript()">
+    <form>
+       <label>Search Terms: <input type="text" id="search"/></label>
+       <input type="button" onclick="sendRequest();" value="Find"/>
+    </form>
+	<div id="info">
+	<div id="map-canvas"></div>
+	</div>
+    <div id="output">
+	<ol id="list"></ol>
+	</div>
+  </body>
+</html>
